@@ -1,0 +1,31 @@
+<div>
+    <h1>Alumnos</h1>
+</div>
+
+<div>
+    <button (click)="refresh()">Refresh</button>
+    <button>Alta</button>
+</div>
+    
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Email</th>
+                <th scope="col">DNI</th>
+                <th scope="col">Matricula</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let alumno of alumnos">
+                <th scope="col">{{ alumno.id }}</th>
+                <td>{{ alumno.nombre }}</td>
+                <td>{{ alumno.email }}</td>
+                <td>{{ alumno.dni }}</td>
+                <td>{{ alumno.matricula }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

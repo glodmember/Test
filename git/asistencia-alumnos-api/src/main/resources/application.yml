@@ -1,0 +1,18 @@
+spring:
+  profiles:
+    active: local
+
+---
+spring:
+  profiles: local
+  datasource:
+    platform: hsqldb
+    initialization-mode: always 
+    continue-on-error: false
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.HSQLDialect
+    hibernate:
+      ddl-auto: create
+    show-sql: true
